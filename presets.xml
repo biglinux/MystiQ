@@ -567,7 +567,7 @@
           <Davinci-Resolve-mp4>
               <label>MPEG4 for Davinci</label>
               <params>-codec:v mpeg4 -q:v 0 -codec:a pcm_s16le </params>
-              <extension>mp4</extension>
+              <extension>mov</extension>
               <category>Resolve</category>
           </Davinci-Resolve-mp4>
 </presets>
