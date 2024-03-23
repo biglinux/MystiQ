@@ -45,7 +45,7 @@ X-KDE-SubstituteUID=false
 X-KDE-Username=
 X-SuSE-translate=true' > ${pkgdir}/usr/share/applications/mystiq.desktop
 
-mkdir -p ${pkgdir}/usr/share/kservices5/ServiceMenus
+mkdir -p ${pkgdir}/usr/share/kio/servicemenus
 echo '[Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
@@ -61,6 +61,6 @@ Icon=mystiq
 Name[es]=Convertir este archivo
 Name=Convert this file
 Name[pt]=Converter este arquivo
-Exec=mystiq %U' > ${pkgdir}/usr/share/kservices5/ServiceMenus/mystiq.desktop
+Exec=mystiq %U' > ${pkgdir}/usr/share/kio/servicemenus/mystiq.desktop
 
 }
