@@ -46,6 +46,27 @@
             <category>MKV</category>
         </MKV_NVENC_H265_HighQuality>
 
+        <MKV_AV1_NVENC_LowQuality>
+            <label>MKV AV1 NVENC Low Quality</label>
+            <params>-c:v av1_nvenc -preset p5 -b:v 1000k -c:a aac -b:a 96k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_AV1_NVENC_LowQuality>
+
+        <MKV_AV1_NVENC_MediumQuality>
+            <label>MKV AV1 NVENC Medium Quality</label>
+            <params>-c:v av1_nvenc -preset p5 -b:v 3000k -c:a aac -b:a 128k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_AV1_NVENC_MediumQuality>
+
+        <MKV_AV1_NVENC_HighQuality>
+            <label>MKV AV1 NVENC High Quality</label>
+            <params>-c:v av1_nvenc -preset p5 -b:v 6000k -c:a aac -b:a 192k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_AV1_NVENC_HighQuality>
+
         <MKV_Youtube>
             <label>MKV optimized for Youtube</label>
             <params>-c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low</params>
@@ -185,7 +206,49 @@
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4_NVENC_H264_HighQuality>
-        
+
+        <MP4_AV1_LowQuality>
+            <label>MP4 AV1 Low Quality</label>
+            <params>-c:v libaom-av1 -crf 45 -b:v 0 -strict experimental -c:a aac -b:a 96k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_AV1_LowQuality>
+
+        <MP4_AV1_MediumQuality>
+            <label>MP4 AV1 Medium Quality</label>
+            <params>-c:v libaom-av1 -crf 30 -b:v 0 -strict experimental -c:a aac -b:a 128k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_AV1_MediumQuality>
+
+        <MP4_AV1_HighQuality>
+            <label>MP4 AV1 High Quality</label>
+            <params>-c:v libaom-av1 -crf 20 -b:v 0 -strict experimental -c:a aac -b:a 192k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_AV1_HighQuality>
+
+        <MP4_AV1_NVENC_LowQuality>
+            <label>MP4 AV1 NVENC Low Quality</label>
+            <params>-c:v av1_nvenc -preset p5 -b:v 1000k -c:a aac -b:a 96k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_AV1_NVENC_LowQuality>
+
+        <MP4_AV1_NVENC_MediumQuality>
+            <label>MP4 AV1 NVENC Medium Quality</label>
+            <params>-c:v av1_nvenc -preset p5 -b:v 3000k -c:a aac -b:a 128k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_AV1_NVENC_MediumQuality>
+
+        <MP4_AV1_NVENC_HighQuality>
+            <label>MP4 AV1 NVENC High Quality</label>
+            <params>-c:v av1_nvenc -preset p5 -b:v 6000k -c:a aac -b:a 192k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_AV1_NVENC_HighQuality>
+
         <MP4Fullscreen>
             <label>MP4 Fullscreen (4:3)</label>
             <params>-f mp4 -r 29.97 -vcodec libx264 -s 640x480 -b:v 1000k -aspect 4:3 -flags +loop -cmp +chroma -maxrate 1500k -bufsize 4M -bt 256k -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7 -partitions +parti4x4+parti8x8+partp8x8+partb8x8 -g 250 -keyint_min 25 -level 30 -qmin 10 -qmax 51 -qcomp 0.6 -sc_threshold 40 -i_qfactor 0.71 -acodec aac -b:a 112k -ar 48000 -ac 2 -strict -2</params>
