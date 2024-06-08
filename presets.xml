@@ -24,12 +24,56 @@
             <extension>mkv</extension>
             <category>MKV</category>
         </MKV_H265>
+
+        <MKV_NVENC_H265_LowQuality>
+            <label>MKV H265 NVENC Low Quality</label>
+            <params>-c:v hevc_nvenc -preset fast -b:v 1000k -c:a aac -b:a 96k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_NVENC_H265_LowQuality>
+
+        <MKV_NVENC_H265_MediumQuality>
+            <label>MKV H265 NVENC Medium Quality</label>
+            <params>-c:v hevc_nvenc -preset slow -b:v 3000k -c:a aac -b:a 128k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_NVENC_H265_MediumQuality>
+
+        <MKV_NVENC_H265_HighQuality>
+            <label>MKV H265 NVENC High Quality</label>
+            <params>-c:v hevc_nvenc -preset slow -b:v 6000k -c:a aac -b:a 192k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_NVENC_H265_HighQuality>
+
         <MKV_Youtube>
             <label>MKV optimized for Youtube</label>
             <params>-c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low</params>
             <extension>mkv</extension>
             <category>MKV</category>
         </MKV_Youtube>
+
+        <AV1_LowQuality>
+            <label>MKV AV1 Low Quality</label>
+            <params>-c:v libaom-av1 -crf 45 -b:v 0 -strict experimental -c:a libopus -b:a 96k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </AV1_LowQuality>
+
+        <AV1_MediumQuality>
+            <label>MKV AV1 Medium Quality</label>
+            <params>-c:v libaom-av1 -crf 30 -b:v 0 -strict experimental -c:a libopus -b:a 128k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </AV1_MediumQuality>
+
+        <AV1_HighQuality>
+            <label>MKV AV1 High Quality</label>
+            <params>-c:v libaom-av1 -crf 20 -b:v 0 -strict experimental -c:a libopus -b:a 192k</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </AV1_HighQuality>
+
         <AVIMSCompatible640x480>
             <label>MS Compatible 640x480</label>
             <params>-acodec libmp3lame -vcodec msmpeg4 -b:a 192k -b:v 1000k -s 640x480 -ar 44100</params>
@@ -103,23 +147,45 @@
             <category>Websites</category>
         </FLVWidescreen>        
         <MP4HighQuality>
-            <label>MP4 High Quality</label>
+            <label>MP4 Low Quality</label>
             <params>-crf 35.0 -vcodec libx264 -acodec aac -ar 48000 -b:a 128k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4HighQuality>
         <MP4VeryHighQuality>
-            <label>MP4 Very High Quality</label>
+            <label>MP4 Medium Quality</label>
             <params>-crf 25.0 -vcodec libx264 -acodec aac -ar 48000 -b:a 160k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4VeryHighQuality>
         <MP4SuperHighQuality>
-            <label>MP4 Super High Quality</label>
+            <label>MP4 High Quality</label>
             <params>-crf 15.0 -vcodec libx264 -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4SuperHighQuality>
+        
+        <MP4_NVENC_H264_LowQuality>
+            <label>MP4 H264 NVENC Low Quality</label>
+            <params>-c:v h264_nvenc -preset fast -b:v 1000k -c:a aac -b:a 96k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_NVENC_H264_LowQuality>
+
+        <MP4_NVENC_H264_MediumQuality>
+            <label>MP4 H264 NVENC Medium Quality</label>
+            <params>-c:v h264_nvenc -preset slow -b:v 3000k -c:a aac -b:a 128k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_NVENC_H264_MediumQuality>
+
+        <MP4_NVENC_H264_HighQuality>
+            <label>MP4 H264 NVENC High Quality</label>
+            <params>-c:v h264_nvenc -preset slow -b:v 6000k -c:a aac -b:a 192k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_NVENC_H264_HighQuality>
+        
         <MP4Fullscreen>
             <label>MP4 Fullscreen (4:3)</label>
             <params>-f mp4 -r 29.97 -vcodec libx264 -s 640x480 -b:v 1000k -aspect 4:3 -flags +loop -cmp +chroma -maxrate 1500k -bufsize 4M -bt 256k -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7 -partitions +parti4x4+parti8x8+partp8x8+partb8x8 -g 250 -keyint_min 25 -level 30 -qmin 10 -qmax 51 -qcomp 0.6 -sc_threshold 40 -i_qfactor 0.71 -acodec aac -b:a 112k -ar 48000 -ac 2 -strict -2</params>
@@ -150,6 +216,28 @@
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4_H265NoResizing>
+        
+        <MP4_NVENC_H265_LowQuality>
+            <label>MP4 H265 NVENC Low Quality</label>
+            <params>-c:v hevc_nvenc -preset fast -b:v 1000k -c:a aac -b:a 96k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_NVENC_H265_LowQuality>
+
+        <MP4_NVENC_H265_MediumQuality>
+            <label>MP4 H265 NVENC Medium Quality</label>
+            <params>-c:v hevc_nvenc -preset slow -b:v 3000k -c:a aac -b:a 128k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_NVENC_H265_MediumQuality>
+
+        <MP4_NVENC_H265_HighQuality>
+            <label>MP4 H265 NVENC High Quality</label>
+            <params>-c:v hevc_nvenc -preset slow -b:v 6000k -c:a aac -b:a 192k</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_NVENC_H265_HighQuality>
+
         <MP4_Youtube>
             <label>MP4 optimized for Youtube</label>
             <params>-c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low</params>
@@ -342,18 +430,6 @@
              <extension>wma</extension>
              <category>Audio</category>
          </wma>
-         <BlackberryCurvefs>
-             <label>Blackberry Curve Fullscreen</label>
-             <params>-f mp4 -vcodec mpeg4 -b:v 400k -r 24 -aspect 4:3 -acodec aac -ar 22050 -ac 2 -b:a 48k</params>
-             <extension>mp4</extension>
-             <category>Blackberry</category>
-          </BlackberryCurvefs>
-          <BlackberryCurvews>
-             <label>Blackberry Curve Widescreen</label>
-             <params>-f mp4 -vcodec mpeg4 -b:v 400k -r 24 -aspect 16:9 -acodec aac -ar 22050 -ac 2 -b:a 48k</params>
-             <extension>mp4</extension>
-             <category>Blackberry</category>
-          </BlackberryCurvews>
           <CDWavStereo>
              <label>Wav for CD</label>
              <params>-vn -ar 44100</params>
@@ -390,54 +466,6 @@
               <extension>3gp</extension>
               <category>Mobile Phones</category>
           </MP3GPstereo>
-          <NeurosOSDTVHQNTSC>
-              <label>Neuros HQ NTSC Fullscreen</label>
-              <params>-f mp4 -r 29.97 -vcodec libxvid -aspect 4:3 -maxrate 2500k -b:v 2000k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec aac -ar 48000 -b:a 128k -ac 2</params>
-               <extension>mp4</extension>
-               <category>Neuros OSD</category>
-          </NeurosOSDTVHQNTSC>
-          <NeurosOSDTVHQPAL>
-               <label>Neuros HQ PAL Fullscreen</label>
-               <params>-f mp4 -r 25 -vcodec libxvid -aspect 4:3 -maxrate 2500k -b:v 2000k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec aac -ar 48000 -b:a 128k -ac 2</params>
-               <extension>mp4</extension>
-               <category>Neuros OSD</category>
-          </NeurosOSDTVHQPAL>
-          <NeurosOSDTVSFNTSC>
-               <label>Neuros Small File NTSC Fullscreen</label>
-               <params>-f mp4 -b:v 800k -r 29.97 -aspect 4:3 -vcodec libxvid -ar 48000 -b:a 80k -ac 2 -acodec aac</params>
-               <extension>mp4</extension>
-               <category>Neuros OSD</category>
-          </NeurosOSDTVSFNTSC>
-          <NeurosOSDTVSFPAL>
-               <label>Neuros Small File PAL Fullscreen</label>
-               <params>-f mp4 -b:v 800k -r 25 -aspect 4:3 -vcodec libxvid -ar 48000 -b:a 80k -ac 2 -acodec aac</params>
-               <extension>mp4</extension>
-               <category>Neuros OSD</category>
-          </NeurosOSDTVSFPAL>
-          <NeurosOSDTVWSHQNTSC>
-               <label>Neuros HQ NTSC Widescreen</label>
-               <params>-f mp4 -r 29.97 -vcodec libxvid -aspect 16:9 -maxrate 3000k -b:v 2500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec aac -ar 48000 -b:a 128k -ac 2</params>
-               <extension>mp4</extension>
-               <category>Neuros OSD</category>
-          </NeurosOSDTVWSHQNTSC>
-          <NeurosOSDTVWSHQPAL>
-               <label>Neuros HQ PAL Widescreen</label>
-               <params>-f mp4 -r 25 -vcodec libxvid -aspect 16:9 -maxrate 3000k -b:v 2500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec aac -ar 48000 -b:a 128k -ac 2</params>
-               <extension>mp4</extension>
-               <category>Neuros OSD</category>
-          </NeurosOSDTVWSHQPAL>
-          <NeurosOSDTVWSSFNTSC>
-               <label>Neuros Small File NTSC Widescreen</label>
-               <params>-f mp4 -b:v 800k -r 29.97 -aspect 16:9 -vcodec libxvid -ar 48000 -b:a 80k -ac 2 -acodec aac</params>
-               <extension>mp4</extension>
-               <category>Neuros OSD</category>
-          </NeurosOSDTVWSSFNTSC>
-          <NeurosOSDTVWSSFPAL>
-               <label>Neuros Small File PAL Widescreen</label>
-               <params>-f mp4 -b:v 800k -r 25 -aspect 16:9 -vcodec libxvid -ar 48000 -b:a 80k -ac 2 -acodec aac</params>
-               <extension>mp4</extension>
-               <category>Neuros OSD</category>
-          </NeurosOSDTVWSSFPAL>
           <cdma3g>
                <label>CDMA Phone Audio (3g2)</label>
                <params>-f 3g2 -ar 22050 -b:a 128k -acodec aac -r 14.985 -vn</params>
@@ -535,19 +563,19 @@
               <category>MOV</category>
           </MOVGeneric>
           <qmovhq>
-              <label>QuickTime H.264 video (High Quality)</label>
+              <label>QuickTime H.264 video (Low Quality)</label>
               <params>-crf 35.0 -vcodec libx264 -preset slow -acodec aac -ar 48000 -b:a 128k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1</params>
               <extension>mov</extension>
               <category>QuickTime</category>
           </qmovhq>
           <qmovshq>
-              <label>QuickTime H.264 video (Super High Quality)</label>
+              <label>QuickTime H.264 video (Medium Quality)</label>
               <params>-crf 15.0 -vcodec libx264 -preset veryslow -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1</params>
               <extension>mov</extension>
               <category>QuickTime</category>
           </qmovshq>
           <qmovvhq>
-              <label>QuickTime H.264 video (Very High Quality)</label>
+              <label>QuickTime H.264 video (High Quality)</label>
               <params>-crf 25.0 -vcodec libx264 -preset slower -acodec aac -ar 48000 -b:a 160k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1</params>
               <extension>mov</extension>
               <category>QuickTime</category>
