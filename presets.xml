@@ -188,21 +188,21 @@
         
         <MP4_NVENC_H264_LowQuality>
             <label>MP4 H264 NVENC Low Quality</label>
-            <params>-c:v h264_nvenc -preset fast -b:v 1000k -c:a aac -b:a 96k</params>
+            <params>-c:v h264_nvenc -preset slow -rc constqp -qp 30 -c:a aac -b:a 96k</params>
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4_NVENC_H264_LowQuality>
 
         <MP4_NVENC_H264_MediumQuality>
             <label>MP4 H264 NVENC Medium Quality</label>
-            <params>-c:v h264_nvenc -preset slow -b:v 3000k -c:a aac -b:a 128k</params>
+            <params>-c:v h264_nvenc -preset slow -rc constqp -qp 26 -c:a aac -b:a 128k</params>
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4_NVENC_H264_MediumQuality>
 
         <MP4_NVENC_H264_HighQuality>
             <label>MP4 H264 NVENC High Quality</label>
-            <params>-c:v h264_nvenc -preset slow -b:v 6000k -c:a aac -b:a 192k</params>
+            <params>-c:v h264_nvenc -preset slow -rc constqp -qp 16 -c:a aac -b:a 192k</params>
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4_NVENC_H264_HighQuality>
