@@ -4,12 +4,12 @@ pkgname=mystiq
 _pkgname=MystiQ
 pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
-pkgdesc="FFmpeg GUI front-end based on Qt5."
+pkgdesc="FFmpeg GUI front-end based on Qt6."
 arch=('x86_64')
 url="https://github.com/swl-x/MystiQ/"
 license=('GPL3')
 depends=('qt6-declarative' 'qt6-multimedia' 'ffmpeg' 'libnotify' 'sox')
-makedepends=('qt5-tools')
+makedepends=('qt6-tools')
 source=("git+https://github.com/biglinux/MystiQ.git")
 sha256sums=(SKIP)
 
