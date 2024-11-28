@@ -9,7 +9,7 @@ arch=('x86_64')
 url="https://github.com/swl-x/MystiQ/"
 license=('GPL3')
 depends=('qt6-declarative' 'qt6-multimedia' 'ffmpeg' 'libnotify' 'sox')
-makedepends=('qt6-tools' 'qt6-base')
+makedepends=('qt6-tools' 'qt6-base' 'qt5-base')
 source=("git+https://github.com/biglinux/MystiQ.git")
 sha256sums=(SKIP)
 
